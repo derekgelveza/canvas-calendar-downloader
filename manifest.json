@@ -16,12 +16,18 @@
 
     "permissions": [
         "tabs",
-        "storage"
+        "storage",
+        "scripting"
     ],
 
     "host_permissions": [
-        "https://*.instructure.com/*",
-        "https://byui.instructure.com/*",
-        "https://byui.instructure.com/calendar"
+    "https://byui.instructure.com/*"
+    ],
+    "content_scripts": [
+        {
+        "matches": ["https://byui.instructure.com/*"],
+        "js": ["content/canvasScraper.js"],
+        "run_at": "document_idle"
+        }
     ]
 }
