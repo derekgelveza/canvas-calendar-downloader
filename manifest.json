@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Canvas Calendar",
+    "version": "0.0.1",
+    "description": "Connects to Canvas and helps users add assignment due dates to personal calendars",
+    "author": "Derek Gelvez",
+
+    "action": {
+        "default_popup": "popup/index.html",
+        "default_title": "Canvas Calendar"
+    },
+
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+
+    "host_permissions": [
+        "https://*.instructure.com/*",
+        "https://byui.instructure.com/*"
+    ]
+}
