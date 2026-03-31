@@ -27,3 +27,17 @@ connectionCheck.addEventListener("click", function() {
     }
     );
 })
+
+
+downloadBtn.addEventListener("click", function() {
+    chrome.runtime.sendMessage(
+        { action: "GET_CANVAS_FEED_URL" },
+        function(response) {
+            if (response && response.success) {
+                window.open(response.feedUrl, "_blank");
+            } else {
+                statusText.textContent = response?.error || "Failed to get calendar feed.";
+            }
+        }
+    );
+});

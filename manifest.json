@@ -21,6 +21,7 @@
 
     "host_permissions": [
         "https://*.instructure.com/*",
-        "https://byui.instructure.com/*"
+        "https://byui.instructure.com/*",
+        "https://byui.instructure.com/calendar"
     ]
 }
